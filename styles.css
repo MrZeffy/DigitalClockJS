@@ -6,26 +6,38 @@ body{
 .container{
 	width: 100%;
 	min-height: 100vh;
-	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
 	background-color: #060A1F;
+	justify-content: center;
+	align-items: center;
 }
 
-.container .clock{
-	position: absolute;
-	top: 120px;
-	left: 30%;
+
+
+
+.container .clock{	
+	flex-basis: 100%;
 	font-family: 'Roboto Condensed', sans-serif;
 	/* -webkit-box-reflect: below 1px linear-gradient(transparent, black);	 */
 	-webkit-box-reflect: below 5px linear-gradient(transparent,#0003);
 	
 }
 
-.container .clock div{
-	display: inline-block;
-	width: 200px;
+
+.miniContainer{
+	display: flex;
+	justify-content: center;
+
+}
+
+.container .clock .timeBlock{
+	/* display: inline-block; */
+	flex-basis: 200px;
 	height: 200px;
 	background: #2196F3;
 	color: white;
+	margin: 10px;
 	
 }
 
@@ -35,14 +47,14 @@ body{
 }
 
 
-.container .clock div span{
+.container .clock .timeBlock span{
 	display: block;
 	
 	text-transform: uppercase;
 	/* font-family: 'roboto', 'sans-serif'; */
 }
 
-.container .clock div span:nth-child(1){
+.container .clock .timeBlock span:nth-child(1){
 	font-size: 120px;
 	text-align: center;
 	font-weight: 300;	
@@ -50,7 +62,7 @@ body{
 	line-height: 150px;
 }
 
-.container .clock div span:nth-child(2){
+.container .clock .timeBlock span:nth-child(2){
 	text-align: center;
 	font-size: 30px;	
 	line-height: 50px;
